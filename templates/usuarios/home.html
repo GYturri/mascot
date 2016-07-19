@@ -16,7 +16,7 @@
 	<div class= "row">
 		{% for mascota in mascotas %}
 			<div class="col col-md-3">
-		        Nombre : <b>{{ mascota.name }}</b>
+		        Nombre : <b><a href="{% url 'mascota:detalle' mascota.id %}">{{ mascota.name }}</b></a>
 		        <figure class="platillo">
 		        	<img src="{% static ""%}../{{ mascota.photo }}" alt="foto de mascota" class="img-responsive">
 		        </figure>

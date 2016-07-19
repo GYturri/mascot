@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>registrar mascota</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<h1>
+    {{ usuario.username | upper }}
+    </h1>
+    <h2>Detalle de la mascota</h2>
+    <ul>
+        <li>nombre: {{ pet.name }}</li>
+        <li>raza: {{ pet.raza }}</li>
+        <li>tamaño: {{ pet.size }}</li>
+        <li>detalles: {{ pet.observations }}</li>
+        <li>ciudad: {{ pet.city }}</li>
+        <li>registrado por: {{ pet.usuario }}</li>
+        <li><figure class="platillo">
+		        	<img src="{% static ""%}../{{ pet.photo }}" alt="foto de mascota" class="img-responsive">
+		        </figure></li>
+    </ul>
+</body>
+</html>

@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from braces.views import LoginRequiredMixin
-from django.views.generic import CreateView
+from django.views.generic import CreateView, DetailView
 from .models import Pet
 from .forms import NPetForm
 
@@ -14,3 +14,9 @@ class Nuevo(LoginRequiredMixin, CreateView):
 		return super(Nuevo, self).form_valid(form)
 	def form_invalid(self, form):
 		return super(Nuevo, self).form_invalid(form)
+
+class Detalle(LoginRequiredMixin, DetailView):
+	template_name = "pets/detalle.html"
+	model = Pet
+	context_object_name = 'pet'
+	slug_field = 'id'
