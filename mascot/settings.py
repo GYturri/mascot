@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'usuarios',
     'home',
     'pets',
+    'social.apps.django_app.default',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -64,6 +65,19 @@ from django.core.urlresolvers import reverse_lazy
 LOGIN_URL = reverse_lazy('login')
 LOGIN_REDIRECT_URL = reverse_lazy('login')
 LOGOUT_URL = reverse_lazy('logout')
+
+AUTHENTICATION_BACKENDS = (
+        'social.backends.facebook.FacebookAppOAuth2',
+        'social.backends.facebook.FacebookOAuth2',
+        #'social.backends.twitter.TwitterOAuth',
+        'django.contrib.auth.backends.ModelBackend',
+)
+
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/inicio'
+SOCIAL_AUTH_USER_MODEL = 'usuarios.Usuario'
+
+SOCIAL_AUTH_FACEBOOK_KEY = '635207249980249'
+SOCIAL_AUTH_FACEBOOK_SECRET = '1da61dadc38e5e61063230ed56aa08a8'
 
 TEMPLATES = [
     {

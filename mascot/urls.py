@@ -27,4 +27,5 @@ urlpatterns = [
     url(r'^inicio/', include('usuarios.urls', namespace="usuario")),
     url(r'^mascota/', include('pets.urls', namespace="mascota")),
     url(r'^admin/', admin.site.urls),
+    url('', include('social.apps.django_app.urls', namespace='social')),
 ]
