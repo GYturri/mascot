@@ -41,4 +41,6 @@ To watch some training videos, visit http://www.youtube.com/user/c9ide
             * cree el modelo pets y lo registre en el admin
 => intale la dependencia Django-braces - para manejar usuarios logueados en clases
             * cree la vista y el template para registrar nueva mascota ?aun falta que funcione y mejorar?
-11/07/2016 -malogre los archivos base.html, home.html y login.html 
+11/07/2016 -malogre los archivos base.html, home.html y login.html
+
+19/07/2016 -se creo el url para mostrar detalle de mascota, se accede desde el inicio usuario
