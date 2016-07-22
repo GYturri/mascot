@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from braces.views import LoginRequiredMixin
 from django.views.generic import TemplateView
 from pets.models import Pet
@@ -11,3 +11,12 @@ class Home(LoginRequiredMixin, TemplateView):
 		context['usuario'] = self.request.user
 		context['mascotas'] = Pet.objects.all()
 		return context
+
+# get email
+def get_email(request):
+	if request.method == "POST":
+		request.session['saved_email'] = request.POST['email']
+		backend = request.session['partial_pipeline']['backend']
+		url = '/complete/%s/' % backend
+		return redirect(url)
+	return render(request, 'get_email.html')

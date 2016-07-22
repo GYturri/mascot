@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>agregar correo</title>
+    </head>
+    <body>
+        <div class="content container">
+            <div class="row">
+                <h1>agregar correo</h1>
+                <form method="POST">{% csrf_token %}
+                    <input type="email" name="email"/>
+                    <input type="submit" value="Guardar"/>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

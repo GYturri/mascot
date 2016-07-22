@@ -44,20 +44,21 @@
         </a>
       </div>
       {% block title %}{% endblock %}
-<div class="container">      
+<div class="container">
+  <div class="page-header"><h1>Bienvenido a Adopta una Mascota</h1></div>      
   <div class="row">
     <div class="col-md-6 offset-col-md-6">
       <div class="panel panel-default">
-        <h1>Bienvenido a Adopta una Mascota</h1>
-        <h2> para ingresar al sistema click aqui <a href="{% url 'usuario:home' %}">ingresar</a></br></h2>
-        <h2><a href="{% url 'social:begin' 'facebook' %}">INICIA CON FACEBOOK</a></h2>
+        
+        <h2> para ingresar al sistema click aqui <a href="{% url 'usuario:home' %}" class="btn btn-primary">ingresar</a></br></h2>
         </br>
         <h2><a href="{% url 'mascota:nuevo' %}">para registrar una mascota sin hogar</a></h2>
       </div>
       
     </div>
   </div>
+</div> 
 
-</div>  
+
     
 {% endblock content %}

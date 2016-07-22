@@ -1,7 +1,7 @@
 {% extends 'base1.html' %}
 {% load staticfiles %}
 {% block content %}
-	<h1>Bienvenido {{ usuario.username | upper }}</h1>
+	<h1>Bienvenido {{ usuario.first_name | upper }}</h1>
 	<br>
 	<br>
 	<a href="{% url 'mascota:nuevo' %}">para registrar una mascota sin hogar</a>
