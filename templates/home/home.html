@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
+
 {% block content %}
-        
        	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -13,19 +13,19 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
           <div class="item active">
-            <img src="{% static "fotos/pets/0.jpg" %}" alt="...">
+            <img src="{% static "img/slides/5.jpg" %}" alt="...">
             <div class="carousel-caption">
               ...
             </div>
           </div>
           <div class="item">
-            <img src="{% static "fotos/pets/1.jpg" %}" alt="..." class="img-responsive">
+            <img src="{% static "fotos/slides/1.jpg" %}" alt="..." class="img-responsive">
             <div class="carousel-caption">
               ...
             </div>
           </div>
           <div class="item">
-            <img src="{% static "fotos/pets/5.jpg" %}" alt="..." class="img-responsive">
+            <img src="{% static "fotos/slides/5.jpg" %}" alt="..." class="img-responsive">
             <div class="carousel-caption">
               ...
             </div>
@@ -45,20 +45,128 @@
       </div>
       {% block title %}{% endblock %}
 <div class="container">
-  <div class="page-header"><h1>Bienvenido a Adopta una Mascota</h1></div>      
+  <p><h1>Bienvenido a Adopta una Mascota</h1>
+    <h3> para ingresar al sistema click aqui <a href="{% url 'usuario:home' %}" class="btn btn-primary">ingresar</a></br></h3>
+          </br>
+          <h3><a href="{% url 'mascota:nuevo' %}">para registrar una mascota sin hogar</a></h3>
+  </p>
+       
   <div class="row">
-    <div class="col-md-6 offset-col-md-6">
+    <div class="col-md-12">
       <div class="panel panel-default">
         
-        <h2> para ingresar al sistema click aqui <a href="{% url 'usuario:home' %}" class="btn btn-primary">ingresar</a></br></h2>
-        </br>
-        <h2><a href="{% url 'mascota:nuevo' %}">para registrar una mascota sin hogar</a></h2>
+        <div class="panel-heading">
+          <form class="form-inline">
+            <div class="form-group">
+              <label for="exampleInputName2">Departamento: </label>
+              <input type="text" class="form-control" id="exampleInputName2">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail2">Ciudad: </label>
+              <input type="text" class="form-control" id="exampleInputEmail2">
+            </div>
+            <button type="submit" class="btn btn-default">Buscar</button>
+          </form>
+        </div>
+        <div class="panel-body">
+          
+          <div class="col-xs-3">
+           <div class="thumbnail">
+              <img src="{% static "img/g.jpg" %}" alt="imagen">
+              <div class="caption">
+                  <h3>Gato 0</h3>
+                      <p>Donec nec justo eget felis facilisis fermentum. 
+                       Aliquam porttitor mauris sit amet orci.</p>
+                  <p>
+                  <a href="#" class="btn btn-primary">Ver mas...</a> 
+                  
+                  </p>
+              </div>
+           </div>
+         </div>
+          <div class="col-xs-3">
+           <div class="thumbnail">
+              <img src="{% static "img/g.jpg" %}" alt="imagen">
+              <div class="caption">
+                  <h3>Gato 1</h3>
+                      <p>Donec nec justo eget felis facilisis fermentum. 
+                       Aliquam porttitor mauris sit amet orci.</p>
+                  <p>
+                  <a href="#" class="btn btn-primary">Ver mas...</a> 
+                  
+                  </p>
+              </div>
+           </div>
+         </div>
+         <div class="col-xs-3">
+           <div class="thumbnail">
+              <img src="{% static "img/g.jpg" %}" alt="imagen">
+              <div class="caption">
+                  <h3>Gato 2</h3>
+                      <p>Donec nec justo eget felis facilisis fermentum. 
+                       Aliquam porttitor mauris sit amet orci.</p>
+                  <p>
+                  <a href="#" class="btn btn-primary">Ver mas...</a> 
+                  
+                  </p>
+              </div>
+           </div>
+         </div>
+          <div class="col-xs-3">
+           <div class="thumbnail">
+              <img src="{% static "img/g.jpg" %}" alt="imagen">
+              <div class="caption">
+                  <h3>Gato3</h3>
+                      <p>Donec nec justo eget felis facilisis fermentum. 
+                       Aliquam porttitor mauris sit amet orci.</p>
+                  <p>
+                  <a href="#" class="btn btn-primary">Ver mas...</a> 
+                  
+                  </p>
+              </div>
+           </div>
+         </div>
+          <div class="col-xs-3">
+           <div class="thumbnail">
+              <img src="{% static "img/g.jpg" %}" alt="imagen">
+              <div class="caption">
+                  <h3>Gato 4</h3>
+                      <p>Donec nec justo eget felis facilisis fermentum. 
+                       Aliquam porttitor mauris sit amet orci.</p>
+                  <p>
+                  <a href="#" class="btn btn-primary">Ver mas...</a> 
+                  
+                  </p>
+              </div>
+           </div>
+         </div>
+         <div class="col-xs-3">
+           <div class="thumbnail">
+              <img src="{% static "img/g.jpg" %}" alt="imagen">
+              <div class="caption">
+                  <h3>Gato 5</h3>
+                      <p>Donec nec justo eget felis facilisis fermentum. 
+                       Aliquam porttitor mauris sit amet orci.</p>
+                  <p>
+                  <a href="#" class="btn btn-primary">Ver mas...</a> 
+                  
+                  </p>
+              </div>
+           </div>
+        </div>
+        
+        
       </div>
-      
+      <div class="panel-footer">
+          
+      </div>
+    
     </div>
   </div>
 </div> 
-
-
-    
+</div> 
 {% endblock content %}
+{% block otherjs %}
+<script src="{% static 'js/dataTables.bootstrap.min.js' %}"></script>
+<script src="{% static 'js/jquery.dataTables.min.js' %}"></script>
+{% endblock %}

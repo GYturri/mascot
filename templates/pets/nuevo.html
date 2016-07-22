@@ -1,20 +1,32 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>detalle mascota</title>
-	<link rel="stylesheet" href="">
-</head>
-<body>
-	<h1>
-    {{ usuario.username | upper }} - {{ usuario.first_name | upper }} {{ usuario.last_name | upper }}
-    </h1>
-    <h2>registrar nueva mascota en adopcion</h2>
-    <h3>para la fecha usar el formato "mm/dd/aaaa"</h3>
-    <form method="post" enctype="multipart/form-data">{% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" value="registrar">Registrar</button>
-    </form>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <h1>
+            {{ usuario.username | upper }} - {{ usuario.first_name | upper }} {{ usuario.last_name | upper }}
+            </h1>
+            <h2>registrar nueva mascota en adopcion</h2>
+            <h3>para la fecha usar el formato "mm/dd/aaaa"</h3>
+            <form method="post" enctype="multipart/form-data">{% csrf_token %}
+                <h3>Nombres</h3>
+                {{form.name}}
+                {{form.name.errors}}
+                <label>Nacimiento</label>
+                {{form.birth}}
+                {{form.birth.errors}}
+                <div class="form-group">
+                <label>Imagen de la mascota</label>
+                {{form.photo}}
+                {{form.photo.errors}}
+                </div>
+                <label>Raza de la mascota</label>
+                {{form.raza}}
+                {{form.raza.errors}}
+                <button type="submit" value="registrar">Registrar</button>
+            </form>
+        </div>
+    </div>
+</div>
+	
+{% endblock content %}
