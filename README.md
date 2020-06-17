@@ -35,7 +35,7 @@ To watch some training videos, visit http://www.youtube.com/user/c9ide
         start project
         
 ------------------------------------------------------------------------------------------------------
-11/07/2016 - Rubick .- Se creo el modelo nuevo de usuarios
+11/07/2016 - Rubick 2 .- Se creo el modelo nuevo de usuarios
             * cree un nuevo super usuario, usuario = usuario1
                                             contraseña = laclavees123
             * cree el modelo pets y lo registre en el admin
